@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javsciprt 기본문법</title>
+    <style></style>
+</head>
+<body>
+    <script>
+        // = 오른쪽값을 왼쪽에 집어넣음
+        //const 고정시켜야 하는값은 const로 선언. 재할당 안됨
+        //호이스팅 : 함수실행전에 안에 변수들을 최상단으로 끌어올림. 선언된 변수와 함수를 가져가서 메모리에 기억해둠
+        //호이스팅시 변수의 선언과 초기화 같이 시켜버림. 값 할당은 그 줄가서 할당.
+        //var 지역변수(블록안에서 선언된 변수),전역변수 개념 확실치 않음. 호이스팅됨
+        //함수만 지역변수로 호이스팅, 나머지는 전역변수로 
+        //let도 호이스팅 됨. TDZ(temporal death zone). 초기화문이 나오기전까지는 접근불가 
+
+        //관련 데이터 하나로 묶어 하나의 변수에 저장 : 배열
+        let fruit = ['banana','apple','grape','mango'];
+        fruit[0] = 'cherry';
+        //배열과 함께 쓸수있는 함수. pop() 마지막요소 뺌, push() 마지막에 요소 넣음
+        //includes() 해당 요소 배열이 포함하는지 여부
+        //indexOf() 아이템 인덱스 찾아줌
+        //slice(시작점) 시작점부터 끝점이전까지 값. 잘린값 반환. slice(시작점, 끝점) 
+        //slice 기존배열 건드리지 않고 새로운 배열 만듦. splice는 기존 배열이 잘림
+        //splice(시작점, 개수). 잘린값 빼고 반환
+        fruit.pop();
+        fruit.push('pineapple');
+        fruit.includes('apple');
+
+        //객체(자료형 타입). 한데이터에 많은 정보가 필요할때, 관련 정보를 묶어 하나의 데이터로 저장하게 해줌
+        //변수이름.키값 == 변수이름['키값']
+        //객체를 배열안에 넣으면... 100명의 환자 리스트
+        let patientList = [
+            {name:'jimin',age:13},
+            {name:'jk',age:25},
+            {name:'jhope',age:40}]
+
+            //switch문은 값이 하나로 떨어질경우에만 사용. 조건식 못옴. break;. default는 else와 비슷.
+            switch(menu) {
+                case 2:
+                case 3: 
+                    console.log('물건사기');
+                    break;
+                default:
+                    console.log('홈으로 가기');
+            }
+
+            //반복문. for문은 정확한 범위를 알때 while은 정확한 범위를 모르고 어떤상태일때 쓰임
+            //for문은 배열과 찰떡
+            
+    </script>
+</body>
+</html>
